@@ -3,7 +3,7 @@
   <section class="sidebar">
 
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="header">MENÚ PRINCIPAL</li>
+      <li class="header">GESTIÓN AULAS</li>
 
       <!-- Dashboard -->
       <li class="<?= ($_GET['c'] ?? '') == 'Dashboard' ? 'active' : '' ?>">
@@ -13,82 +13,60 @@
         </a>
       </li>
 
-      <!-- Usuarios -->
-      <li class="<?= ($_GET['c'] ?? '') == 'Usuarios' ? 'active' : '' ?>">
-        <a href="<?= BASE_URL ?>index.php?c=Usuarios&m=index">
-          <i class="fa fa-users"></i>
-          <span>Usuarios</span>
+      <!-- Espacios -->
+      <li class="<?= ($_GET['c'] ?? '') == 'Espacios' ? 'active' : '' ?>">
+        <a href="<?= BASE_URL ?>index.php?c=Espacios">
+          <i class="fa fa-building"></i>
+          <span>Espacios</span>
         </a>
       </li>
 
-      <!-- Estudiantes -->
-      <li class="<?= ($_GET['c'] ?? '') == 'Estudiante' ? 'active' : '' ?>">
-        <a href="<?= BASE_URL ?>index.php?c=Estudiante">
-          <i class="fa fa-graduation-cap"></i>
-          <span>Estudiantes</span>
-        </a>
-      </li>
-
-      <!-- Semestres -->
-      <li class="<?= ($_GET['c'] ?? '') == 'Semestre' ? 'active' : '' ?>">
-        <a href="<?= BASE_URL ?>index.php?c=Semestre">
-          <i class="fa fa-calendar"></i>
-          <span>Semestres</span>
+      <!-- Profesores -->
+      <li class="<?= ($_GET['c'] ?? '') == 'Profesores' ? 'active' : '' ?>">
+        <a href="<?= BASE_URL ?>index.php?c=Profesores">
+          <i class="fa fa-user"></i>
+          <span>Profesores</span>
         </a>
       </li>
 
       <!-- Materias -->
-      <li class="treeview <?= in_array(($_GET['c'] ?? ''), ['Materia','MateriaSemestre']) ? 'active' : '' ?>">
-        <a href="#">
+      <li class="<?= ($_GET['c'] ?? '') == 'Materias' ? 'active' : '' ?>">
+        <a href="<?= BASE_URL ?>index.php?c=Materias">
           <i class="fa fa-book"></i>
           <span>Materias</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
         </a>
-
-        <ul class="treeview-menu">
-          <li class="<?= ($_GET['c'] ?? '') == 'Materia' ? 'active' : '' ?>">
-            <a href="<?= BASE_URL ?>index.php?c=Materia">
-              <i class="fa fa-circle-o"></i> Materias
-            </a>
-          </li>
-
-          <li class="<?= ($_GET['c'] ?? '') == 'MateriaSemestre' ? 'active' : '' ?>">
-            <a href="<?= BASE_URL ?>index.php?c=MateriaSemestre">
-              <i class="fa fa-circle-o"></i> Asignación por semestre
-            </a>
-          </li>
-        </ul>
       </li>
 
-      <!-- ================= ESTADO ACADÉMICO ================= -->
-      <li class="treeview <?= in_array(($_GET['c'] ?? ''), ['EstadoAcademico','EstadoSemestre']) ? 'active' : '' ?>">
-        <a href="#">
-          <i class="fa fa-line-chart"></i>
-          <span>Estado Académico</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
+      <!-- Carreras -->
+      <li class="<?= ($_GET['c'] ?? '') == 'Carreras' ? 'active' : '' ?>">
+        <a href="<?= BASE_URL ?>index.php?c=Carreras">
+          <i class="fa fa-graduation-cap"></i>
+          <span>Carreras</span>
         </a>
+      </li>
 
-        <ul class="treeview-menu">
+      <!-- Horarios -->
+      <li class="<?= ($_GET['c'] ?? '') == 'Horarios' ? 'active' : '' ?>">
+        <a href="<?= BASE_URL ?>index.php?c=Horarios">
+          <i class="fa fa-clock-o"></i>
+          <span>Horarios</span>
+        </a>
+      </li>
 
-          <!-- Estado por Estudiantes -->
-          <li class="<?= ($_GET['c'] ?? '') == 'EstadoAcademico' ? 'active' : '' ?>">
-            <a href="<?= BASE_URL ?>index.php?c=EstadoAcademico">
-              <i class="fa fa-circle-o"></i> Estado estudiantes
-            </a>
-          </li>
+      <!-- Asignaciones -->
+      <li class="<?= ($_GET['c'] ?? '') == 'Asignaciones' ? 'active' : '' ?>">
+        <a href="<?= BASE_URL ?>index.php?c=Asignaciones">
+          <i class="fa fa-calendar"></i>
+          <span>Asignaciones</span>
+        </a>
+      </li>
 
-          <!-- Estado por Semestre -->
-          <li class="<?= ($_GET['c'] ?? '') == 'EstadoSemestre' ? 'active' : '' ?>">
-            <a href="<?= BASE_URL ?>index.php?c=EstadoSemestre">
-              <i class="fa fa-circle-o"></i> Estado semestre
-            </a>
-          </li>
-
-        </ul>
+      <!-- Reservas -->
+      <li class="<?= ($_GET['c'] ?? '') == 'Reservas' ? 'active' : '' ?>">
+        <a href="<?= BASE_URL ?>index.php?c=Reservas">
+          <i class="fa fa-check-square-o"></i>
+          <span>Reservas</span>
+        </a>
       </li>
 
     </ul>
